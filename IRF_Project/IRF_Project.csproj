@@ -76,6 +76,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="jatekosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jatekosUC.Designer.cs">
+      <DependentUpon>jatekosUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jatékosok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -99,6 +105,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatUC.Designer.cs">
+      <DependentUpon>StatUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jatekosUC.resx">
+      <DependentUpon>jatekosUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StatUC.resx">
+      <DependentUpon>StatUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
