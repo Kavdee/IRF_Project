@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IRF_Project.Classes;
 
 namespace IRF_Project
 {
@@ -34,13 +35,6 @@ namespace IRF_Project
             chart1.DataBind();
             dataGridView1.DataSource = golok.ToList();
             
-        }
-
-        public class Focista
-        {
-            public string Nev { get; set; }
-            public decimal? Gol { get; set; }
-            public decimal? Golpassz { get; set; }
         }
 
         private void chart1_Click(object sender, EventArgs e)
