@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IRF_Project.UserControls;
 
 namespace IRF_Project
 {
@@ -29,7 +30,7 @@ namespace IRF_Project
         private void jatekosButton_Click(object sender, EventArgs e)
         {
             PanelClear();
-            jatekosUC juc = new jatekosUC();
+            jatekosokUC juc = new jatekosokUC();
             juc.Show();
             panel1.Controls.Add(juc);
         }

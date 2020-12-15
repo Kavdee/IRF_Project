@@ -16,10 +16,8 @@ namespace IRF_Project
     {
         public byte Mezszám { get; set; }
         public string Név { get; set; }
-        public byte Pozició_FK { get; set; }
-        public Nullable<byte> Gól { get; set; }
-        public Nullable<byte> Gólpassz { get; set; }
-    
-        public virtual Pozició Pozició { get; set; }
+        public string Pozició { get; set; }
+        public Nullable<decimal> Gól { get; set; }
+        public Nullable<decimal> Gólpassz { get; set; }
     }
 }

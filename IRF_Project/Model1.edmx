@@ -11,36 +11,12 @@
           </Key>
           <Property Name="Mezszám" Type="tinyint" Nullable="false" />
           <Property Name="Név" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Pozició_FK" Type="tinyint" Nullable="false" />
-          <Property Name="Gól" Type="tinyint" />
-          <Property Name="Gólpassz" Type="tinyint" />
-        </EntityType>
-        <EntityType Name="Pozició">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="tinyint" Nullable="false" />
           <Property Name="Pozició" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gól" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="Gólpassz" Type="decimal" Precision="4" Scale="0" />
         </EntityType>
-        <Association Name="FK_Jatékosok_TOPozició">
-          <End Role="Pozició" Type="Self.Pozició" Multiplicity="1" />
-          <End Role="Jatékosok" Type="Self.Jatékosok" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pozició">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Jatékosok">
-              <PropertyRef Name="Pozició_FK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="ArsenalModelStoreContainer">
           <EntitySet Name="Jatékosok" EntityType="Self.Jatékosok" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pozició" EntityType="Self.Pozició" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Jatékosok_TOPozició" Association="Self.FK_Jatékosok_TOPozició">
-            <End Role="Pozició" EntitySet="Pozició" />
-            <End Role="Jatékosok" EntitySet="Jatékosok" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -53,61 +29,27 @@
           </Key>
           <Property Name="Mezszám" Type="Byte" Nullable="false" />
           <Property Name="Név" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Pozició_FK" Type="Byte" Nullable="false" />
-          <Property Name="Gól" Type="Byte" />
-          <Property Name="Gólpassz" Type="Byte" />
-          <NavigationProperty Name="Pozició" Relationship="Self.FK_Jatékosok_TOPozició" FromRole="Jatékosok" ToRole="Pozició" />
+          <Property Name="Pozició" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gól" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Gólpassz" Type="Decimal" Precision="4" Scale="0" />
         </EntityType>
-        <EntityType Name="Pozició">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Byte" Nullable="false" />
-          <Property Name="Pozició1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Jatékosok" Relationship="Self.FK_Jatékosok_TOPozició" FromRole="Pozició" ToRole="Jatékosok" />
-        </EntityType>
-        <Association Name="FK_Jatékosok_TOPozició">
-          <End Role="Pozició" Type="Self.Pozició" Multiplicity="1" />
-          <End Role="Jatékosok" Type="Self.Jatékosok" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pozició">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Jatékosok">
-              <PropertyRef Name="Pozició_FK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="ArsenalEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ArsenalEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Jatékosok" EntityType="Self.Jatékosok" />
-          <EntitySet Name="Pozició" EntityType="Self.Pozició" />
-          <AssociationSet Name="FK_Jatékosok_TOPozició" Association="Self.FK_Jatékosok_TOPozició">
-            <End Role="Pozició" EntitySet="Pozició" />
-            <End Role="Jatékosok" EntitySet="Jatékosok" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ArsenalModelStoreContainer" CdmEntityContainer="ArsenalEntities">
+        <EntityContainerMapping StorageEntityContainer="ArsenalModelStoreContainer" CdmEntityContainer="ArsenalEntities1">
           <EntitySetMapping Name="Jatékosok">
             <EntityTypeMapping TypeName="ArsenalModel.Jatékosok">
               <MappingFragment StoreEntitySet="Jatékosok">
                 <ScalarProperty Name="Mezszám" ColumnName="Mezszám" />
                 <ScalarProperty Name="Név" ColumnName="Név" />
-                <ScalarProperty Name="Pozició_FK" ColumnName="Pozició_FK" />
+                <ScalarProperty Name="Pozició" ColumnName="Pozició" />
                 <ScalarProperty Name="Gól" ColumnName="Gól" />
                 <ScalarProperty Name="Gólpassz" ColumnName="Gólpassz" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pozició">
-            <EntityTypeMapping TypeName="ArsenalModel.Pozició">
-              <MappingFragment StoreEntitySet="Pozició">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Pozició1" ColumnName="Pozició" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

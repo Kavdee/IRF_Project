@@ -13,10 +13,10 @@ namespace IRF_Project
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArsenalEntities : DbContext
+    public partial class ArsenalEntities1 : DbContext
     {
-        public ArsenalEntities()
-            : base("name=ArsenalEntities")
+        public ArsenalEntities1()
+            : base("name=ArsenalEntities1")
         {
         }
     
@@ -26,6 +26,5 @@ namespace IRF_Project
         }
     
         public virtual DbSet<Jatékosok> Jatékosok { get; set; }
-        public virtual DbSet<Pozició> Pozició { get; set; }
     }
 }

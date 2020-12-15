@@ -58,14 +58,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 402);
+            this.panel1.Size = new System.Drawing.Size(1295, 648);
             this.panel1.TabIndex = 2;
             // 
             // bezarButton
             // 
-            this.bezarButton.Location = new System.Drawing.Point(894, 420);
+            this.bezarButton.Location = new System.Drawing.Point(1314, 527);
             this.bezarButton.Name = "bezarButton";
-            this.bezarButton.Size = new System.Drawing.Size(91, 42);
+            this.bezarButton.Size = new System.Drawing.Size(100, 50);
             this.bezarButton.TabIndex = 3;
             this.bezarButton.Text = "Bezárás";
             this.bezarButton.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 476);
+            this.ClientSize = new System.Drawing.Size(1426, 672);
             this.Controls.Add(this.bezarButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statisztikaButton);
