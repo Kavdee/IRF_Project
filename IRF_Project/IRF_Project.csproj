@@ -113,6 +113,12 @@
     <Compile Include="UserControls\jatekosokUC.Designer.cs">
       <DependentUpon>jatekosokUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\rajzUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\rajzUC.Designer.cs">
+      <DependentUpon>rajzUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StatUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\jatekosokUC.resx">
       <DependentUpon>jatekosokUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\rajzUC.resx">
+      <DependentUpon>rajzUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StatUC.resx">
       <DependentUpon>StatUC.cs</DependentUpon>

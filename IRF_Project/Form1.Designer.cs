@@ -45,6 +45,7 @@
             this.jatekosButton.TabIndex = 0;
             this.jatekosButton.Text = "Játékosok";
             this.jatekosButton.UseVisualStyleBackColor = true;
+            this.jatekosButton.Visible = false;
             this.jatekosButton.Click += new System.EventHandler(this.jatekosButton_Click);
             // 
             // statisztikaButton
@@ -55,6 +56,7 @@
             this.statisztikaButton.TabIndex = 1;
             this.statisztikaButton.Text = "Statisztika";
             this.statisztikaButton.UseVisualStyleBackColor = true;
+            this.statisztikaButton.Visible = false;
             this.statisztikaButton.Click += new System.EventHandler(this.statisztikaButton_Click);
             // 
             // panel1
@@ -83,19 +85,20 @@
             this.torlesButton.TabIndex = 4;
             this.torlesButton.Text = "Törlés";
             this.torlesButton.UseVisualStyleBackColor = true;
+            this.torlesButton.Visible = false;
             this.torlesButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 2500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 672);
+            this.ClientSize = new System.Drawing.Size(1482, 673);
             this.Controls.Add(this.torlesButton);
             this.Controls.Add(this.bezarButton);
             this.Controls.Add(this.panel1);

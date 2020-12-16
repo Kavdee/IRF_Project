@@ -31,6 +31,8 @@ namespace IRF_Project.Classes
         public virtual void MoveLabda()
         {
             Top -= 1;
+            
+            
         }
     }
 }

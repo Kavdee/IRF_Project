@@ -15,24 +15,19 @@ namespace IRF_Project
     public partial class Form1 : Form
     {
         private List<Labda> _labda = new List<Labda>();
+        int kesik = 0;
         public Form1()
         {
             InitializeComponent();
-            Startpositon();
-            Labdagyar Gyar = new Labdagyar();
-            Addlabda(Gyar);
+            
+            rajzUC ruc = new rajzUC();
+            ruc.Show();
+            panel1.Controls.Add(ruc);
+            
+
 
         }
 
-        private void Addlabda(Labdagyar Gyar)
-        {
-            var labda = Gyar.createnew();
-            _labda.Add(labda);
-            labda.Top = 650;
-            labda.Left = 750 + labda.Width / 2;
-            Controls.Add(labda);
-            timer1.Start();
-        }
 
         private void Startpositon()
         {
@@ -40,6 +35,7 @@ namespace IRF_Project
             bezarButton.Visible = false;
             jatekosButton.Visible = true;
             statisztikaButton.Visible = true;
+            torlesButton.Visible = true;
         }
 
         private void jatekosButton_Click(object sender, EventArgs e)
@@ -68,8 +64,9 @@ namespace IRF_Project
         private void bezarButton_Click(object sender, EventArgs e)
         {
             Startpositon();
-        }
 
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             PanelClear();
@@ -80,13 +77,14 @@ namespace IRF_Project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            var maxPosition = 0;
-            foreach (var ball in _labda)
+            kesik = kesik + 1;
+            if (kesik == 2)
             {
-                ball.MoveLabda();
-                if (ball.Left > maxPosition)
-                    maxPosition = ball.Left;
+                timer1.Stop();
+                Startpositon();
+                PanelClear();
             }
+
         }
     }
 }
