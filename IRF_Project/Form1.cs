@@ -34,14 +34,7 @@ namespace IRF_Project
             panel1.Controls.Add(ruc);
         }
 
-        private void Startpositon()
-        {
-            panel1.Visible = false;
-            bezarButton.Visible = false;
-            jatekosButton.Visible = true;
-            statisztikaButton.Visible = true;
-            torlesButton.Visible = true;
-        }
+
 
         private void jatekosButton_Click(object sender, EventArgs e)
         {
@@ -49,13 +42,6 @@ namespace IRF_Project
             jatekosokUC juc = new jatekosokUC();
             juc.Show();
             panel1.Controls.Add(juc);
-        }
-
-        private void PanelClear()
-        {
-            panel1.Controls.Clear();
-            panel1.Visible = true;
-            bezarButton.Visible = true;
         }
 
         private void statisztikaButton_Click(object sender, EventArgs e)
@@ -94,6 +80,21 @@ namespace IRF_Project
                 
             }
 
+        }
+        private void Startpositon()
+        {
+            panel1.Visible = false;
+            bezarButton.Visible = false;
+            jatekosButton.Visible = true;
+            statisztikaButton.Visible = true;
+            torlesButton.Visible = true;
+        }
+
+        private void PanelClear()
+        {
+            panel1.Controls.Clear();
+            panel1.Visible = true;
+            bezarButton.Visible = true;
         }
     }
 }
