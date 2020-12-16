@@ -19,15 +19,20 @@ namespace IRF_Project
         public Form1()
         {
             InitializeComponent();
-            
-            rajzUC ruc = new rajzUC();
-            ruc.Show();
-            panel1.Controls.Add(ruc);
-            
 
+            Kezdo();
 
         }
 
+        private void Kezdo()
+        {
+            panel1.Left = 0;
+            panel1.Width = 1500;
+            panel1.Height = 720;
+            rajzUC ruc = new rajzUC();
+            ruc.Show();
+            panel1.Controls.Add(ruc);
+        }
 
         private void Startpositon()
         {
@@ -81,8 +86,12 @@ namespace IRF_Project
             if (kesik == 2)
             {
                 timer1.Stop();
-                Startpositon();
                 PanelClear();
+                Startpositon();
+                panel1.Width = 1000;
+                panel1.Height = 650;
+                panel1.Left = torlesButton.Width + 30;
+                
             }
 
         }

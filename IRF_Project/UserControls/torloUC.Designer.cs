@@ -65,24 +65,31 @@
             // 
             // eltavolitButton
             // 
-            this.eltavolitButton.Location = new System.Drawing.Point(725, 308);
+            this.eltavolitButton.BackColor = System.Drawing.Color.Red;
+            this.eltavolitButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.eltavolitButton.FlatAppearance.BorderSize = 2;
+            this.eltavolitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eltavolitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eltavolitButton.ForeColor = System.Drawing.Color.White;
+            this.eltavolitButton.Location = new System.Drawing.Point(725, 164);
             this.eltavolitButton.Name = "eltavolitButton";
             this.eltavolitButton.Size = new System.Drawing.Size(312, 72);
             this.eltavolitButton.TabIndex = 5;
             this.eltavolitButton.Text = "Eltávolítás";
-            this.eltavolitButton.UseVisualStyleBackColor = true;
+            this.eltavolitButton.UseVisualStyleBackColor = false;
             this.eltavolitButton.Click += new System.EventHandler(this.eltavolitButton_Click);
             // 
             // torloUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Firebrick;
             this.Controls.Add(this.eltavolitButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "torloUC";
-            this.Size = new System.Drawing.Size(1300, 650);
+            this.Size = new System.Drawing.Size(1300, 454);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

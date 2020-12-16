@@ -26,7 +26,7 @@ namespace IRF_Project.Classes
 
         private void DrawImage(Graphics graphics)
         {
-            graphics.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
+            graphics.FillEllipse(new SolidBrush(Color.White), 0, 0, Width, Height);
         }
         public virtual void MoveLabda()
         {

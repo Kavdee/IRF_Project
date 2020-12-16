@@ -29,7 +29,7 @@ namespace IRF_Project.UserControls
         {
             var labda = Gyar.createnew();
             _labda.Add(labda);
-            labda.Top =400;
+            labda.Top =500;
             labda.Left = 600+ labda.Width / 2;
             Controls.Add(labda);
             timer1.Enabled = true;
@@ -40,8 +40,7 @@ namespace IRF_Project.UserControls
         {
             Graphics g = e.Graphics;
             Pen myPen = new Pen(Color.Black);
-            Brush mybrush = new SolidBrush(Color.Red);
-            Font myfont = new Font("Arial", 22);
+
 
             myPen.Width = 5;
             g.DrawLine(myPen, 610, 400, 610, 250);
