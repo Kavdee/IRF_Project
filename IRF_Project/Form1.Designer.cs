@@ -47,7 +47,7 @@
             this.jatekosButton.ForeColor = System.Drawing.Color.White;
             this.jatekosButton.Location = new System.Drawing.Point(13, 38);
             this.jatekosButton.Name = "jatekosButton";
-            this.jatekosButton.Size = new System.Drawing.Size(103, 50);
+            this.jatekosButton.Size = new System.Drawing.Size(120, 50);
             this.jatekosButton.TabIndex = 0;
             this.jatekosButton.Text = "Játékosok";
             this.jatekosButton.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@
             this.statisztikaButton.ForeColor = System.Drawing.Color.White;
             this.statisztikaButton.Location = new System.Drawing.Point(13, 122);
             this.statisztikaButton.Name = "statisztikaButton";
-            this.statisztikaButton.Size = new System.Drawing.Size(103, 50);
+            this.statisztikaButton.Size = new System.Drawing.Size(120, 50);
             this.statisztikaButton.TabIndex = 1;
             this.statisztikaButton.Text = "Statisztika";
             this.statisztikaButton.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@
             this.bezarButton.ForeColor = System.Drawing.Color.White;
             this.bezarButton.Location = new System.Drawing.Point(13, 597);
             this.bezarButton.Name = "bezarButton";
-            this.bezarButton.Size = new System.Drawing.Size(103, 50);
+            this.bezarButton.Size = new System.Drawing.Size(120, 50);
             this.bezarButton.TabIndex = 3;
             this.bezarButton.Text = "Bezárás";
             this.bezarButton.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@
             this.torlesButton.ForeColor = System.Drawing.Color.White;
             this.torlesButton.Location = new System.Drawing.Point(12, 205);
             this.torlesButton.Name = "torlesButton";
-            this.torlesButton.Size = new System.Drawing.Size(103, 50);
+            this.torlesButton.Size = new System.Drawing.Size(120, 50);
             this.torlesButton.TabIndex = 4;
             this.torlesButton.Text = "Törlés";
             this.torlesButton.UseVisualStyleBackColor = false;
@@ -128,8 +128,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statisztikaButton);
             this.Controls.Add(this.jatekosButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Arsenal program";
             this.ResumeLayout(false);
             this.PerformLayout();
 
